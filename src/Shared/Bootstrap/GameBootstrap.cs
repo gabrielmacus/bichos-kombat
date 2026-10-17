@@ -1,5 +1,6 @@
 using Godot;
 using BichosKombat.Features.Combat;
+using BichosKombat.Features.Enemies;
 using BichosKombat.Features.Player;
 using BichosKombat.Shared.Messaging;
 
@@ -16,5 +17,6 @@ public partial class GameBootstrap : Node
         // Registrar acá cada módulo, en el orden en que deben reaccionar a los eventos:
         PlayerModuleExtensions.AddPlayerModule();
         CombatModuleExtensions.AddCombatModule();
+        EnemiesModuleExtensions.AddEnemiesModule();
     }
 }

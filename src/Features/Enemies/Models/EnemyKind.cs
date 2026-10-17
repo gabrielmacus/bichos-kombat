@@ -1,6 +1,6 @@
 namespace BichosKombat.Features.Enemies.Models;
 
-// Los tipos de enemigo. Uno nuevo: agregarlo acá y sus valores en EnemyStatsTable
+// Los tipos de enemigo. Uno nuevo: agregarlo acá y crear su .tres en resources/enemies/
 public enum EnemyKind
 {
     Ant,        // hormiga: el enemigo normal, va directo

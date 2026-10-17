@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyStats" format=3]
+
+[ext_resource type="Script" path="res://src/Features/Enemies/Models/EnemyStats.cs" id="1_stats"]
+
+[resource]
+script = ExtResource("1_stats")
+Kind = 2
+MaxHealth = 60
+Speed = 35.0
+Damage = 20
+AttackRange = 45.0
+WindupTime = 0.9
+AttackRate = 0.5
+Experience = 3

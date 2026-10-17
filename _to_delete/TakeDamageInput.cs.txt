@@ -1,3 +1,0 @@
-namespace BichosKombat.Features.Player.UseCases.TakeDamage;
-
-public record TakeDamageInput(int PlayerId, int Damage);

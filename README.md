@@ -20,6 +20,12 @@ Controles de prueba: **jugador 1** con WASD y ataca con Espacio; **jugador 2** c
 |---|---|
 | **Player** | Cuerpo del bicho de cada jugador: moverse (`Move`), entrar y salir (`Spawn`/`Despawn`), recibir daño con armadura (`TakeDamage`, escucha `PlayerHitEvent`). Greybox: cuadrado de color con una raya hacia donde mira; blanco = herido, gris = muerto |
 | **Combat** | Ataque con tecla hacia donde mira el bicho, con cadencia `AttackRate` en golpes por segundo (`Attack`). Publica `AttackPerformedEvent` (círculo de golpe + daño); al morir el jugador deja de atacar (`Disarm`). Greybox: círculo blanco un instante |
+| **Enemies** | Enemigos con IA simple (`Think`): persiguen al jugador vivo más cercano, al tenerlo al alcance frenan y avisan (rojo + círculo de alcance), pegan a quien siga adentro (`PlayerHitEvent`) y esperan. Reciben los golpes de `AttackPerformedEvent` (`TakeHits`) y al morir publican `EnemyDiedEvent`. Valores por tipo en `resources/enemies/*.tres` (se editan en el inspector). `TestEnemySpawner` es provisorio hasta que exista Horde |
+| **Horde** | *(vacío)* Oleadas: cuántos enemigos, de qué tipo y dónde aparecen; reemplaza a `TestEnemySpawner` |
+| **Progression** | *(vacío)* Experiencia y nivel de cada jugador: escucha `EnemyDiedEvent`, publica `PlayerLeveledUpEvent` |
+| **Items** | *(vacío)* Ítems que se juntan y mejoran al bicho: publica `ItemEquippedEvent` |
+| **Projectiles** | *(vacío)* Proyectiles de enemigos (y de jugadores más adelante); ver "Ideas anotadas" |
+| **UI** | *(vacío)* HUD: vida, nivel y experiencia de cada jugador; solo consulta y escucha |
 
 ## La idea
 
